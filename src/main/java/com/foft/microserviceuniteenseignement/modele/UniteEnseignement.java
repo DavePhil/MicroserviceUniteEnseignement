@@ -14,8 +14,10 @@ public class UniteEnseignement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(unique = true)
     private String code;
-
-
+    private int idClasse;
+    @ManyToOne
+    private Semestre semestre;
 
 }
