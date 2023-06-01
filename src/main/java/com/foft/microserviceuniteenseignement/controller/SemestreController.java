@@ -14,6 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("MicroSemestre")
 public class SemestreController {
     @Autowired
     private SemestreService semestreService;

@@ -6,6 +6,7 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -32,5 +33,9 @@ public class UniteEnseignementService {
 
     public void deleteUniteEnseignement(Integer id){
         uniteEnseignementRepository.deleteById(id);
+    }
+
+    public List<UniteEnseignement> findByClasseAndSemestre(Integer idClasse, Integer idSemestre){
+        return uniteEnseignementRepository.findByIdClasseAndSemestre(idClasse, idSemestre);
     }
 }
